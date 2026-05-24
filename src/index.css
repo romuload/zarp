@@ -50,7 +50,7 @@ body {
 
 .app-wrapper {
   width: 100%;
-  max-width: 390px;
+  max-width: 100%;
   min-height: 100dvh;
   background: #ffffff;
   position: relative;
