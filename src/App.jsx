@@ -10,7 +10,7 @@ import ReferDashboardPage from './pages/ReferDashboardPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/zarp">
       <div className="app-wrapper">
         <Routes>
           <Route path="/" element={<OnboardingPage />} />
