@@ -1,0 +1,360 @@
+/* ── Page ── */
+.card-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: #f2f4f3;
+  padding-top: 52px;
+}
+
+/* ── Card carousel ── */
+.card-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 16px;
+}
+
+.card-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Card visual ── */
+.card-visual {
+  flex-shrink: 0;
+  width: calc(100% - 40px);
+  max-width: 310px;
+  height: 190px;
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.card-visual--orange {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+}
+
+.card-visual--dark {
+  background: linear-gradient(135deg, #0b261c 0%, #13402e 100%);
+}
+
+/* Top row: chip + wifi */
+.card-visual__chip {
+  width: 36px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-visual__chip-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 100%;
+  justify-content: center;
+}
+
+.card-visual__chip-lines span {
+  display: block;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1px;
+}
+
+.card-visual__wifi {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Logo */
+.card-visual__logo {
+  position: absolute;
+  bottom: 44px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+}
+
+/* Card number */
+.card-visual__number {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 2.5px;
+  line-height: 1;
+}
+
+/* Footer */
+.card-visual__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-visual__holder {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.card-visual__expiry {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Carousel dots ── */
+.card-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.card-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(0, 13, 8, 0.15);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card-dot--active {
+  background: var(--color-primary);
+  width: 18px;
+}
+
+/* ── Balance ── */
+.card-balance {
+  background: white;
+  margin: 16px 16px 0;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-balance__label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 13, 8, 0.7);
+  line-height: 16px;
+}
+
+.card-balance__amount {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-balance__value {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  letter-spacing: -0.96px;
+  line-height: 1.2;
+}
+
+.card-balance__currency {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+}
+
+/* ── Progress bar ── */
+.card-progress {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-progress__track {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 102, 0, 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.card-progress__fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.card-progress__meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-progress__meta span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 13, 8, 0.7);
+}
+
+.card-progress__meta strong {
+  font-weight: 500;
+}
+
+/* ── Quick actions ── */
+.card-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 16px 0;
+}
+
+.card-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: white;
+  border: 1px solid rgba(0, 13, 8, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+
+.card-action:active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.card-action__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.card-action__label {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-900);
+  letter-spacing: -0.24px;
+  white-space: nowrap;
+}
+
+/* ── Transactions ── */
+.card-txs-section {
+  margin: 16px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-txs-section__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  letter-spacing: -0.32px;
+  padding: 12px 0;
+}
+
+.card-txs {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-tx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card-tx:last-child {
+  border-bottom: none;
+}
+
+.card-tx__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-tx__icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background: rgba(0, 178, 107, 0.05);
+  border: 1px solid rgba(19, 64, 46, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-tx__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.card-tx__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  letter-spacing: -0.28px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-tx__date {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 13, 8, 0.7);
+  letter-spacing: -0.24px;
+  line-height: 1;
+}
+
+.card-tx__amount {
+  font-size: 14px;
+  font-weight: 500;
+  color: #d90026;
+  letter-spacing: -0.28px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Nav spacer ── */
+.card-nav-spacer {
+  height: 88px;
+}

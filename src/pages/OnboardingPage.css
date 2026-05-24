@@ -1,0 +1,250 @@
+/* ────────────────────────────────────────
+   CONTAINER — full screen, tudo sobreposto
+──────────────────────────────────────── */
+.onboarding {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: white;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+
+.onboarding:active {
+  cursor: grabbing;
+}
+
+/* ────────────────────────────────────────
+   IMAGEM — background full screen
+──────────────────────────────────────── */
+.onboarding__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  pointer-events: none;
+}
+
+/* ────────────────────────────────────────
+   GRADIENTE — branco só no finalzinho
+   cobre os ~45% inferiores da tela,
+   transição suave do transparente ao branco
+──────────────────────────────────────── */
+.onboarding__gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0)    0%,
+    rgba(255, 255, 255, 0.75) 45%,
+    rgba(255, 255, 255, 0.97) 65%,
+    #ffffff                   80%
+  );
+  pointer-events: none;
+}
+
+/* ────────────────────────────────────────
+   PROGRESS BAR — topo
+──────────────────────────────────────── */
+.onboarding__progress {
+  position: absolute;
+  top: 48px;
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+/* ────────────────────────────────────────
+   GLASS CARDS
+   Posicionados acima do bloco de conteúdo.
+   bottom: 300px garante folga sobre os
+   ~260px de altura do content em qualquer tela.
+──────────────────────────────────────── */
+.ob-card {
+  position: absolute;
+  bottom: 300px;
+  z-index: 5;
+}
+
+/* Slide 1 — coluna (flags + texto), centralizado */
+.ob-card--1 {
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Slides 2 e 4 — linha, largura total */
+.ob-card--wide {
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Slide 3 — linha, largura compacta */
+.ob-card--compact {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 305px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Flags (slide 1) ── */
+.ob-card__flags {
+  display: flex;
+  align-items: center;
+}
+
+.ob-flag {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: -10px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.ob-flag--last {
+  margin-right: 0;
+}
+
+/* ── Icon wrappers ── */
+.ob-card__icon-wrap {
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ob-card__icon-wrap--light {
+  width: 40px;
+  height: 40px;
+  background: white;
+  padding: 8px;
+}
+
+.ob-card__icon-wrap--dark {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.ob-card__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ob-card__payment-icon {
+  background: var(--color-primary);
+  border-radius: 6.4px;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ob-card__payment-icon img {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* ── Card text ── */
+.ob-card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ob-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1c1c;
+  line-height: 1.1;
+  letter-spacing: -0.9px;
+}
+
+.ob-card__title--dark {
+  color: #000d08;
+  letter-spacing: -0.32px;
+  line-height: 1;
+}
+
+.ob-card__sub {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5f5e5e;
+  line-height: 1.5;
+}
+
+.ob-card__sub--dark {
+  font-size: 12px;
+  color: rgba(0, 13, 8, 0.7);
+  letter-spacing: -0.24px;
+}
+
+/* ────────────────────────────────────────
+   CONTEÚDO — fixo na base, sobre o gradiente
+──────────────────────────────────────── */
+.onboarding__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 6;
+}
+
+.onboarding__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.onboarding__title {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.onboarding__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.onboarding__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.onboarding__actions .btn {
+  flex: 1;
+}

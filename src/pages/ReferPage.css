@@ -1,0 +1,156 @@
+.refer-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: #fff;
+}
+
+/* ── Header ── */
+.refer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 13, 8, 0.06);
+}
+
+.refer-header__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  letter-spacing: -0.32px;
+}
+
+.refer-header__close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: rgba(0, 13, 8, 0.06);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.refer-header__close img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) opacity(0.6);
+}
+
+/* ── Body ── */
+.refer-body {
+  flex: 1;
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* ── Hero ── */
+.refer-hero {
+  width: 200px;
+  height: 200px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+}
+
+.refer-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Text ── */
+.refer-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  letter-spacing: -0.84px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.refer-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 13, 8, 0.6);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+/* ── Steps ── */
+.refer-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.refer-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.refer-step__num {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.refer-step__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-900);
+  line-height: 1.4;
+}
+
+/* ── Footer CTA ── */
+.refer-footer {
+  padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+  background: #fff;
+  border-top: 1px solid rgba(0, 13, 8, 0.06);
+}
+
+.refer-cta {
+  width: 100%;
+  height: 52px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.15s;
+}
+
+.refer-cta:active {
+  opacity: 0.85;
+}

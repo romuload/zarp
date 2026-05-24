@@ -1,0 +1,90 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  background: white;
+  border-top: 1px solid rgba(0, 13, 8, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 8px 0 max(16px, env(safe-area-inset-bottom));
+  z-index: 50;
+}
+
+/* ── Nav items ── */
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) opacity(0.35);
+}
+
+.bottom-nav__label {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-gray-700);
+  letter-spacing: -0.2px;
+  line-height: normal;
+}
+
+.bottom-nav__item--active .bottom-nav__label {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Tint active icon orange via CSS filter */
+.bottom-nav__item--active .bottom-nav__icon {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(1deg) brightness(100%) contrast(102%);
+}
+
+/* ── Plus button slot (espaço central) ── */
+.bottom-nav__plus-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bottom-nav__plus {
+  position: absolute;
+  top: -24px;
+  background: var(--color-secondary-dark);
+  border: none;
+  border-radius: 100px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(19, 64, 46, 0.35);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.bottom-nav__plus:active {
+  transform: scale(0.92);
+}
+
+.bottom-nav__plus img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}

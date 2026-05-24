@@ -1,0 +1,18 @@
+.progress-bar {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  width: 100%;
+}
+
+.progress-bar__seg {
+  flex: 1;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--color-progress-inactive);
+  transition: background 0.25s ease;
+}
+
+.progress-bar__seg--active {
+  background: var(--color-progress-active);
+}

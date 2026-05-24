@@ -1,0 +1,263 @@
+/* ── Page ── */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: #f2f4f3;
+}
+
+/* ── Header ── */
+.home-header {
+  background: var(--color-gray-800);
+  border-radius: 0 0 32px 32px;
+  padding: 52px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-header__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.home-header__greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.home-header__welcome {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1;
+}
+
+.home-header__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.home-header__icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-header__icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-header__icon-btn img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.home-header__dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 100px;
+  background: var(--color-primary);
+  border: 1.5px solid var(--color-gray-800);
+}
+
+/* Balance */
+.home-header__balance {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-header__balance-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-header__amount {
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.home-header__eye {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-header__eye img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  opacity: 0.5;
+}
+
+.home-header__growth {
+  font-size: 13px;
+  font-weight: 500;
+  color: #33ffad;
+  line-height: 1;
+}
+
+/* Action pills */
+.home-header__pills {
+  display: flex;
+  gap: 8px;
+}
+
+.home-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+
+.home-pill:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.home-pill img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Scrollable content ── */
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0 0;
+}
+
+/* ── Section ── */
+.home-section {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-section__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  line-height: 1;
+}
+
+/* ── Horizontal scroll strip ── */
+.home-hscroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -16px;
+  padding: 0 16px 4px;
+}
+
+.home-hscroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Credit cards ── */
+.home-card {
+  flex-shrink: 0;
+  width: 220px;
+  height: 136px;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-card--orange {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+}
+
+.home-card--dark {
+  background: linear-gradient(135deg, #0b261c 0%, #13402e 100%);
+}
+
+.home-card__logo {
+  width: 28px;
+  height: 28px;
+}
+
+.home-card__number {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 2px;
+}
+
+.home-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Transactions ── */
+.home-transactions {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 -16px;
+}
+
+/* ── Nav spacer ── */
+.home-nav-spacer {
+  height: 88px;
+}

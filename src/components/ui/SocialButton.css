@@ -1,0 +1,35 @@
+.social-btn {
+  height: 56px;
+  border: 1px solid rgba(0, 13, 8, 0.1);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-btn:active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.social-btn__icon {
+  height: 20px;
+  width: 20px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.social-btn__label {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-900);
+  letter-spacing: -0.32px;
+}

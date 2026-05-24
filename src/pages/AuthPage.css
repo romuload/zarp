@@ -1,0 +1,81 @@
+.auth-page {
+  width: 100%;
+  min-height: 100dvh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-page__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px 16px;
+  width: 100%;
+}
+
+/* ── Top body: logo + form ── */
+.auth-page__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+
+/* ── Logo ── */
+.auth-page__logo {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* ── Form area ── */
+.auth-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Heading ── */
+.auth-page__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-page__title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  line-height: 1.2;
+}
+
+.auth-page__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+}
+
+/* ── Fields ── */
+.auth-page__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Social buttons ── */
+.auth-page__social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Action buttons at bottom ── */
+.auth-page__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
